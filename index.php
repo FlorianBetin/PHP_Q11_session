@@ -1,3 +1,11 @@
+<?php 
+
+$_SESSION['shop_list'] = [];
+
+setcookie('shoptrack', $_GET['add_to_cart']);
+
+
+?>
 <?php require 'inc/data/products.php'; ?>
 <?php require 'inc/head.php'; ?>
 <section class="cookies container-fluid">
@@ -15,6 +23,7 @@
                     </figcaption>
                 </figure>
             </div>
+            
         <?php } ?>
     </div>
 </section>

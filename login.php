@@ -1,4 +1,27 @@
-<?php require 'inc/head.php'; ?>
+<?php 
+
+define('LOGIN','Florian');
+
+if (empty($_POST))
+{
+    echo 'No username';
+}
+
+if ($_POST['loginname'] !== LOGIN)
+{
+    echo 'The login doesn\'t match the current session';;
+}else{
+    session_start();
+    $_SESSION['loginname'] = LOGIN;
+    header('Location: /index.php');
+}
+
+
+
+
+
+
+require 'inc/head.php'; ?>
 <div class="container" style="margin-top:40px">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
