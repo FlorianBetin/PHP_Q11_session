@@ -1,7 +1,5 @@
 <?php 
 
-$_SESSION['shop_list'] = [];
-
 setcookie('shoptrack', $_GET['add_to_cart']);
 
 
